@@ -1,6 +1,6 @@
 package com.programmercave.javaconcepts;
 
-import com.programmercave.javaconcepts.oop.OopBankAccount;
+import com.programmercave.javaconcepts.oop.basic.OopBankAccount;
 
 import java.lang.Integer;
 /**

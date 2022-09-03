@@ -1,4 +1,4 @@
-package com.programmercave.javaconcepts.oop;
+package com.programmercave.javaconcepts.oop.basic;
 
 import java.lang.Integer;
 
