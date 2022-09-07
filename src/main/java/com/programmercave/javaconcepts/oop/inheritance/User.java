@@ -2,54 +2,41 @@ package com.programmercave.javaconcepts.oop.inheritance;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import java.lang.Integer;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class User {
     private String name;
     private String email;
-    private Integer age;
-    private String address;
-
-    public User(String name, String email, Integer age, String address) {
-    	this.name = name;
-    	this.email = email;
-    	this.age = age;
-    	this.address = address;
-    }
-
-    public String getName() {
-    	return this.name;
-    }
-
-    public void setName(String name) {
-    	this.name = name;
-    }
-
-    public String getEmail() {
-    	return this.email;
-    }
-
-    public void setEmail(String email) {
-    	this.email = email;
-    }
-
-    public Integer getAge() {
-    	return this.age;
-    }
-
-    public void setAge(Integer age) {
-    	this.age = age;
-    }
-
-    public String getAddress() {
-    	return this.address;
-    }
-
-    public void setAddress(String address) {
-    	this.address = address;
-    }
 
     public void changeEmail(String email) {
         this.email = email;
     }
+
+    // Method overloading
+    // Method signature: 
+    // 1. Method name
+    // 2. # of args
+    // 3. Data type of args
+
+    public void printInfo() {
+        System.out.println("print with no signature");
+    }
+
+    public void printInfo(String title) {
+        System.out.println(" \n User: " + title + " " + this.getName());
+    }
 }
+
+// Interfaces
+// Class - Blueprint
+// Interface - Blue print of behaviour
+// Database db = new MySqlDB();
+// Interfaces - define methods with an impl.
+// Abstract - mixture of interface and class
+// implemented methods + not-implemented
+// Abstract classes - state

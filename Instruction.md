@@ -18,3 +18,6 @@
 
 `mvn compile exec:java -Dexec.mainClass=mypackage.classnamehavingmain`
 
+Here
+
+`mvn compile exec:java -Dexec.mainClass=com.programmercave.javaconcepts.App`

@@ -1,51 +1,39 @@
 package com.programmercave.javaconcepts.oop.inheritance;
 
+import lombok.Getter;
+import lombok.Setter;
 import java.lang.Integer;
 
+@Getter
+@Setter
 public class Student extends User {
 
     private String batchName;
     private Integer psp;
-    private StudentStatus status = StudentStatus.ACTIVE;
+    private StudentStatus status = StudentStatus.ACTIVE; // ACTIVE, PAUSED, COMPLETED
 
+    // Define parametrised constructor
 
-    public Student(String name, String email, Integer age, String address, String batchName, Integer psp, StudentStatus status) {
-        super(name, email, age, address);
+    public Student(String name, String email, String batchName, Integer psp) {
+        super(name, email);
         this.batchName = batchName;
-        this.psp = psp;
-        this.status = status;
-    }
 
-    public String getBatchName() {
-        return this.batchName;
-    }
-
-    public void setBatchName(String batchName) {
-        this.batchName = batchName;
-    }
-
-    public Integer getPsp() {
-        return this.psp;
-    }
-
-    public void setPsp(Integer psp) {
+        if (psp < 0 || psp > 100) {
+            throw new IllegalArgumentException("PSP should be between 0 and 100");
+        }
         this.psp = psp;
     }
 
-    public StudentStatus getStatus() {
-        return this.status;
+    public Student() {
     }
 
-    public void setStatus(StudentStatus status) {
-        this.status = status;
-    }
-
-    public void changeBatch(String batchName) {
+    void changeBatch(String batchName) {
         this.batchName = batchName;
     }
 
-    public void pauseCourse() {
-        this.status = StudentStatus.PAUSED;
-    }
-    
+    // @Override
+    // public void printInfo() {
+    //     System.out.println("\nStudent: " + getName() + " " + getBatchName());
+    // }
+
 }

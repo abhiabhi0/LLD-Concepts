@@ -1,28 +1,59 @@
 package com.programmercave.javaconcepts;
 
 import com.programmercave.javaconcepts.oop.basic.OopBankAccount;
+import com.programmercave.javaconcepts.oop.inheritance.*;
 
-import java.lang.Integer;
+import java.util.List;
+
+
 /**
  * Hello world!
  *
  */
-public class App 
-{
-    public static void main( String[] args )
-    {
-        OopBankAccount abhi = new OopBankAccount(100, 1);
-        // abhi.setBalance(new Integer(100));
-        // abhi.setNumber(new Integer(1));
+public class App {
+    public static void main(String[] args) {
+        User student = new Student("student", "student@scaler.in", "batch", 100);
+        student.printInfo("Mr"); // inheritance
+    }
 
-        OopBankAccount bob = new OopBankAccount(200, 2);
-        // bob.setBalance(new Integer(200));
-        // bob.setNumber(new Integer(1));
+    public static void resetEmail(List<User> users) {
+        for (User user : users) {
+            user.changeEmail("");
 
-        System.out.println("###################");
+            if (user instanceof Student) {
+                Student student = (Student) user;
 
-        abhi.transfer(bob, 50);
+                System.out.println("Name :" + student.getName() + " " + student.getPsp());
 
-        System.out.println(abhi.getBalance());
+                student.setPsp(0);
+                System.out.println("Name :" + student.getName() + " " + student.getPsp());
+
+            }            
+
+        }
+
     }
 }
+
+// Reusable code
+// In order to reset email, I just had to call the parent's changeEmail fn
+// Instead of defining a method for each class
+// instanceof
+// A a = (A) b;
+// 6:05
+// 10:35
+// Three types of DP
+// 1. Creational - OOP
+// Factory - Simple Factory - No OOP
+// 2. Structural - 
+// 3. Behavioural -  
+
+// 1. Subtyping
+//  - Compile and run time
+
+// Method overloading - Compile time
+// 2. Generic Polymorphism
+// 3. Adhoc polymorphism - Duck Typing
+
+// PATCH /edit-student (JSON patchBody) 
+// { field: "name", op: "set", value: "Tanmay"}
