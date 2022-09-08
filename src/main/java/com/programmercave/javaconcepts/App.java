@@ -2,6 +2,7 @@ package com.programmercave.javaconcepts;
 
 import com.programmercave.javaconcepts.oop.basic.OopBankAccount;
 import com.programmercave.javaconcepts.oop.inheritance.*;
+import com.programmercave.javaconcepts.oop.SOLID.bird.*;
 
 import java.util.List;
 
@@ -12,8 +13,11 @@ import java.util.List;
  */
 public class App {
     public static void main(String[] args) {
-        User student = new Student("student", "student@scaler.in", "batch", 100);
-        student.printInfo("Mr"); // inheritance
+        // User student = new Student("student", "student@scaler.in", "batch", 100);
+        // student.printInfo("Mr"); // inheritance
+
+        Eagle eagle = new Eagle(40, "black", "medium", "sharp", BirdType.Eagle);
+        eagle.fly();
     }
 
     public static void resetEmail(List<User> users) {

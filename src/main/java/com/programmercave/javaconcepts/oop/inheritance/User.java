@@ -24,7 +24,7 @@ public class User {
     // 3. Data type of args
 
     public void printInfo() {
-        System.out.println("print with no signature");
+        System.out.println("print with no args");
     }
 
     public void printInfo(String title) {
