@@ -25,7 +25,7 @@ def main():
 	# student.print_details()
 
 	# user = User("user", "user@gmail")
-	# user.print_details() Python not supports like java or C++
+	# user.print_details() Python does not support method overloading like java or C++
 	# we need to define method with default arguments
 if __name__ == '__main__':
 	main()
