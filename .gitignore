@@ -1,4 +1,3 @@
-__pycache__
-basic/__pycache__
-inheritance/__pycache__
-SOLID/__pycache__
+__pycache__/
+*.py[cod]
+*$py.class
