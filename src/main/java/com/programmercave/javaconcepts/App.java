@@ -15,9 +15,6 @@ public class App {
     public static void main(String[] args) {
         // User student = new Student("student", "student@scaler.in", "batch", 100);
         // student.printInfo("Mr"); // inheritance
-
-        Eagle eagle = new Eagle(40, "black", "medium", "sharp", BirdType.Eagle);
-        eagle.fly();
     }
 
     public static void resetEmail(List<User> users) {
