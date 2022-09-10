@@ -5,7 +5,7 @@ class Student(User):
 
 	__status = StudentStatus.ACTIVE
 
-	def __init__(self, name, email, batch_name, psp):
+	def __init__(self, name: str, email: str, batch_name: str, psp: int) -> None:
 		super().__init__(name, email)
 		self.__batch_name = batch_name
 		
@@ -13,8 +13,8 @@ class Student(User):
 			raise Exception("PSP should be between 0 and 100")
 		self.__psp = psp
 
-	def print_details(self):
+	def print_details(self) -> None:
 		print("In Student", self.get_name(), self.__batch_name)
 
-	def change_batch(self, batch_name):
+	def change_batch(self, batch_name: str) -> None:
 		self.batch_name = batch_name
