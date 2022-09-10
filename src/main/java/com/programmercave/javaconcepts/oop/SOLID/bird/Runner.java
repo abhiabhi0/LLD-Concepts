@@ -1,14 +1,20 @@
 package com.programmercave.javaconcepts.oop.SOLID.bird;
 
+import com.programmercave.javaconcepts.oop.SOLID.bird.interfaces.Swimmable;
+import com.programmercave.javaconcepts.oop.SOLID.bird.interfaces.Flyable;
+
 public class Runner {
     public static void main(String[] args) {
-        FlyingBird parrot = new Parrot(10, "Green", "Small", "Sharp", BirdType.Parrot);
+        Flyable parrot = new Parrot(10, "Green", "Small", "Sharp", BirdType.Parrot);
         parrot.fly();
 
-        FlyingBird eagle = new Eagle(20, "Brown", "Medium", "Sharp", BirdType.Eagle);
+        Flyable eagle = new Eagle(20, "Brown", "Medium", "Sharp", BirdType.Eagle);
         eagle.fly();
 
-        NonFlyingBird penguin = new Penguin(30, "Black", "Large", "Sharp", BirdType.Penguin);
+        Bird penguin = new Penguin(30, "Black", "Large", "Sharp", BirdType.Penguin);
         penguin.makeSound();
+
+        // Make a pengiun swim
+        ((Swimmable) penguin).swim();
     }
 }
