@@ -2,13 +2,13 @@ from abc import ABC, abstractmethod
 import BirdType
 
 class Bird(ABC):
-	def __init__(self, weight, colour, size, beakType, birdType):
-		self.weight = weight
-		self.colour = colour
-		self.size = size
-		self.beakType = beakType
-		self.birdType = birdType
+	def __init__(self, weight: int, colour: str, size: int, beakType : str, birdType : BirdType) -> None:
+		self.__weight = weight
+		self.__colour = colour
+		self.__size = size
+		self.__beakType = beakType
+		self.__birdType = birdType
 
 	@abstractmethod
-	def fly(self):
-		pass
+	def makeSound(self) -> None:
+		...
